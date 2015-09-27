@@ -1,0 +1,22 @@
+{
+  "name": "woniu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lncwwn/woniu.git"
+  },
+  "author": "victor li",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/lncwwn/woniu/issues"
+  },
+  "homepage": "https://github.com/lncwwn/woniu#readme",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  }
+}

@@ -58,3 +58,7 @@ target/
 bin/
 include/
 pip-selfcheck.json
+
+# for nodejs and npm
+node_modules/
+bower_components/
