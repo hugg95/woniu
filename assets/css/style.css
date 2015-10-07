@@ -44,10 +44,22 @@ body {
   border-bottom: 1px solid #f0f0f0;
 }
 .single-post .post-title {
+  display: inline-block;
+  width: 68%;
+  padding-right: 10px;
   color: #555;
 }
 .single-post .post-title:visited {
   color: #c0c0c0;
+}
+.single-post .post-author,
+.single-post .post-date {
+  display: inline-block;
+  font-size: 12px;
+}
+.single-post .post-author {
+  min-width: 5%;
+  main-width: 8%;
 }
 .post-body {
   padding: 15px;
@@ -56,10 +68,23 @@ body {
   height: 30px;
   line-height: 15px;
   font-weight: bold;
-  border-bottom: 1px solid #f0f0f0;
 }
 .post-body .title a {
   color: #555;
+}
+.post-body .info {
+  height: 26px;
+  padding-left: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 12px;
+}
+.post-body .info .author,
+.post-body .info .date {
+  display: inline-block;
+}
+.post-body .info .author {
+  min-width: 6%;
+  max-width: 8%;
 }
 .post-body .body {
   padding-top: 15px;

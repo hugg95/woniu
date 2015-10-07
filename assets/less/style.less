@@ -49,10 +49,22 @@ body {
     padding: 10px 15px;
     border-bottom: 1px solid #f0f0f0;
     .post-title {
+        display: inline-block;
+        width: 68%;
+        padding-right: 10px;
         color: #555;
     }
     .post-title:visited {
         color: #c0c0c0;
+    }
+    .post-author,
+    .post-date {
+        display: inline-block;
+        font-size: 12px;
+    }
+    .post-author {
+        min-width: 5%;
+        main-width: 8%;
     }
 }
 
@@ -62,9 +74,22 @@ body {
         height: 30px;
         line-height: 15px;
         font-weight: bold;
-        border-bottom: 1px solid #f0f0f0;
         a {
             color: #555;
+        }
+    }
+    .info {
+        height: 26px;
+        padding-left: 15px;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 12px;
+        .author,
+        .date {
+            display: inline-block;
+        }
+        .author {
+            min-width: 6%;
+            max-width: 8%;
         }
     }
     .body {
