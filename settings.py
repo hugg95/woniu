@@ -15,3 +15,10 @@ settings = {
     'static_path': STATIC_PATH,
     'static_url_prefix': '/assets/'
 }
+
+db = {
+    'host': '127.0.0.1',
+    'database': 'db_woniu',
+    'user': 'root',
+    'password': 'test'
+}

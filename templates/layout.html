@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蜗牛</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    {% block css-area %}{% end %}
+</head>
+<body>
+    <div class="header">
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand">蜗牛</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#">整租</a>
+                        </li>
+                        <li>
+                            <a href="#">合租</a>
+                        </li>
+                        <li>
+                            <a href="#">短租</a>
+                        </li>
+                        <li>
+                            <a href="#">最新</a>
+                        </li>
+                        <li>
+                            <a href="#">黑名单</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/user/login">登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% block main %} WoNiu  {% end %}
+</body>
+</html>
