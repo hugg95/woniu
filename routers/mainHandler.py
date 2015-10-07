@@ -7,7 +7,7 @@ import string
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self, pageSize=50, pageNum=1):
-        posts = modules.db.db.query('select * from post')
+        posts = modules.db.db.query('select id, title, member_id, type, created, updated from post order by if(updated is NULL, created, updated) desc')
         post_ids = []
         for post in posts:
             post_ids.append(str(post.id))

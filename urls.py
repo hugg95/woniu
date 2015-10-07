@@ -4,6 +4,7 @@ import routers.userHandler as user
 
 urls = [
     (r'/', main.MainHandler),
+    (r'/posts/new', main.MainHandler),
     (r'/user/login', user.LoginHandler),
     (r'/post/(\d+)', post.PostHandler),
 ]

@@ -74,12 +74,13 @@ body {
 }
 .post-body .info {
   height: 26px;
-  padding-left: 15px;
+  padding: 0 15px;
   border-bottom: 1px solid #f0f0f0;
   font-size: 12px;
 }
 .post-body .info .author,
-.post-body .info .date {
+.post-body .info .date,
+.post-body .info .fun {
   display: inline-block;
 }
 .post-body .info .author {
