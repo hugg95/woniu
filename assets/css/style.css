@@ -44,7 +44,6 @@ body {
   border-bottom: 1px solid #f0f0f0;
 }
 .single-post .post-title {
-  font-weight: bold;
   color: #555;
 }
 .single-post .post-title:visited {
@@ -58,6 +57,9 @@ body {
   line-height: 15px;
   font-weight: bold;
   border-bottom: 1px solid #f0f0f0;
+}
+.post-body .title a {
+  color: #555;
 }
 .post-body .body {
   padding-top: 15px;
