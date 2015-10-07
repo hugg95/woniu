@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block css-area %}
+{% end %}
+{% block main %}
+    <div class="main">
+        <div class="col-md-8 main-body">
+            <div class="row">
+                <div class="col-md-12 post-body">
+                    <div class="title">
+                        <a href="javascript:;">{{post.title_display}}</a>
+                    </div>
+                    <div class="info">
+                        <a class="author" href="/user/{{ post.author.id  }}">{{ post.author.nick }}</a>
+                        <span class="date">{{ post.updated and post.updated or post.created }}</span>
+                        <span class="fun pull-right">
+                            <a class="btn btn-default btn-xs" href="/post/edit/{{ post.id }}">编辑</a>
+                        </span>
+                    </div>
+                    <div class="body">
+                        {{ post.content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 pull-right main-side"></div>
+    </div>
+{% end %}
