@@ -1,5 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+# @author victor li nianchaoli@msn.cn
+# @date 2015/10/07
 
 import tornado.web
 import modules.db
@@ -7,8 +9,11 @@ import string
 import constants
 
 class MainHandler(tornado.web.RequestHandler):
-    def get(self, pageSize=50, pageNum=1):
-        posts = modules.db.db.query('select id, title, member_id, type, category_id, created, updated from post order by if(updated is NULL, created, updated) desc')
+    def get(self, category=None, pageSize=50, pageNum=1):
+        query = r'select id, title, member_id, type, category_id, created, updated from post order by if(updated is NULL, created, updated) desc'
+        if category is not None:
+            query = r'select id, title, member_id, type, category_id, created, updated from post where category_id = %d order by if(updated is NULL, created, updated) desc' % category
+        posts = modules.db.db.query(query)
         post_ids = []
         for post in posts:
             post_ids.append(str(post.id))
@@ -23,3 +28,4 @@ class MainHandler(tornado.web.RequestHandler):
                         post.author = author
 
         self.render('index.html', posts=posts)
+
