@@ -43,6 +43,36 @@ body {
 
 .main-body {
     background-color: #fff;
+    border: 1px solid @border-color;
+    .post-head {
+        height: 66px;
+        padding: 10px 15px;
+        background-color: #f6f6f6;
+        border-bottom: 1px solid #f0f0f0;
+        .title {
+            height: 30px;
+            line-height: 15px;
+            font-weight: bold;
+            a {
+                color: #555;
+            }
+        }
+        .info {
+            height: 26px;
+            padding: 0 15px;
+            font-size: 12px;
+            .author,
+            .date,
+            .fun {
+                display: inline-block;
+            }
+            .author {
+                min-width: 6%;
+                max-width: 8%;
+            }
+        }
+
+    }
 }
 
 .single-post {
@@ -69,30 +99,7 @@ body {
 }
 
 .post-body {
-    padding: 15px;
-    .title {
-        height: 30px;
-        line-height: 15px;
-        font-weight: bold;
-        a {
-            color: #555;
-        }
-    }
-    .info {
-        height: 26px;
-        padding: 0 15px;
-        border-bottom: 1px solid #f0f0f0;
-        font-size: 12px;
-        .author,
-        .date,
-        .fun {
-            display: inline-block;
-        }
-        .author {
-            min-width: 6%;
-            max-width: 8%;
-        }
-    }
+    padding: 0 15px 15px;
     .body {
         padding-top: 15px;
         color: #555;
@@ -109,4 +116,13 @@ body {
     text-align: center;
     background-color: #555;
     border-top: 5px solid #666;
+}
+
+.panel-no-radius {
+    border-radius: 0;
+}
+
+::selection {
+    background-color: #3399cc;
+    color: #fff;
 }

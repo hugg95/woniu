@@ -38,6 +38,35 @@ body {
 }
 .main-body {
   background-color: #fff;
+  border: 1px solid #dddddd;
+}
+.main-body .post-head {
+  height: 66px;
+  padding: 10px 15px;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #f0f0f0;
+}
+.main-body .post-head .title {
+  height: 30px;
+  line-height: 15px;
+  font-weight: bold;
+}
+.main-body .post-head .title a {
+  color: #555;
+}
+.main-body .post-head .info {
+  height: 26px;
+  padding: 0 15px;
+  font-size: 12px;
+}
+.main-body .post-head .info .author,
+.main-body .post-head .info .date,
+.main-body .post-head .info .fun {
+  display: inline-block;
+}
+.main-body .post-head .info .author {
+  min-width: 6%;
+  max-width: 8%;
 }
 .single-post {
   padding: 10px 15px;
@@ -62,30 +91,7 @@ body {
   main-width: 8%;
 }
 .post-body {
-  padding: 15px;
-}
-.post-body .title {
-  height: 30px;
-  line-height: 15px;
-  font-weight: bold;
-}
-.post-body .title a {
-  color: #555;
-}
-.post-body .info {
-  height: 26px;
-  padding: 0 15px;
-  border-bottom: 1px solid #f0f0f0;
-  font-size: 12px;
-}
-.post-body .info .author,
-.post-body .info .date,
-.post-body .info .fun {
-  display: inline-block;
-}
-.post-body .info .author {
-  min-width: 6%;
-  max-width: 8%;
+  padding: 0 15px 15px;
 }
 .post-body .body {
   padding-top: 15px;
@@ -101,4 +107,11 @@ body {
   text-align: center;
   background-color: #555;
   border-top: 5px solid #666;
+}
+.panel-no-radius {
+  border-radius: 0;
+}
+::selection {
+  background-color: #3399cc;
+  color: #fff;
 }
