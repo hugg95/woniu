@@ -21,7 +21,7 @@ class MainHandler(tornado.web.RequestHandler):
             _type = ord(post.type)
             post.title_display = _type and u'[求租]' + _category + post.title or u'[出租]' + _category + post.title
         if post_ids:
-            authors = modules.db.db.query('select id, nick, user_id from member where id in (' + ','.join(post_ids) + ')')
+            authors = modules.db.db.query('select id, nick from member where id in (' + ','.join(post_ids) + ')')
             for author in authors:
                 for post in posts:
                     if author.id == post.member_id:
