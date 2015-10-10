@@ -13,6 +13,7 @@ class LoginHandler(tornado.web.RequestHandler):
     def post(self):
         nick = self.get_body_argument('nick')
         password = self.get_body_argument('password')
+        nick = nick.strip()
         if not nick or not password:
             self.write({'success': False})
             self.finish()
@@ -38,8 +39,10 @@ class SignupHandler(tornado.web.RequestHandler):
         nick = self.get_body_argument('nick')
         password = self.get_body_argument('password')
         password_confirm = self.get_body_argument('password_confirm')
+        nick = nick.strip()
         if nick and password and password_confirm:
-            if password == password_confirm:
+            length = len(password)
+            if length >=6 and length <= 18 and password == password_confirm:
                 md5 = hashlib.md5()
                 md5.update(password)
                 password_md5 = md5.hexdigest()
