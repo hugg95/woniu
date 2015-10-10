@@ -7,5 +7,6 @@ urls = [
     (r'/posts/new', main.MainHandler),
     (r'/user/login', user.LoginHandler),
     (r'/user/signup', user.SignupHandler),
+    (r'/user/(\d+)', user.ProfileHandler),
     (r'/post/(\d+)', post.PostHandler),
 ]

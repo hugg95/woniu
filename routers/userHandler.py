@@ -2,11 +2,13 @@
 # -*- coding: utf-8 -*-
 
 import tornado.web
+import baseHandler
 import hashlib
 import modules.db
 import datetime
+import string
 
-class LoginHandler(tornado.web.RequestHandler):
+class LoginHandler(baseHandler.RequestHandler):
     def get(self):
         self.render('login.html')
 
@@ -31,7 +33,7 @@ class LoginHandler(tornado.web.RequestHandler):
         self.write({'success': False})
         self.finish()
 
-class SignupHandler(tornado.web.RequestHandler):
+class SignupHandler(baseHandler.RequestHandler):
     def get(self):
         self.render('signup.html');
 
@@ -59,3 +61,11 @@ class SignupHandler(tornado.web.RequestHandler):
 
         self.write({'success': False})
         self.finish()
+
+class ProfileHandler(baseHandler.RequestHandler):
+    def get(self, id):
+        user = modules.db.db.get('select id, nick, created, updated from member where id = %s', id)
+        if user:
+            self.render('profile.html', user=user)
+
+        raise tornado.web.HTTPError(404)
