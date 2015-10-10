@@ -36,18 +36,21 @@ body {
   margin: 0 auto;
   padding-bottom: 100px;
 }
+@media screen and (max-width: 1200px) {
+  .main {
+    width: 100%;
+  }
+}
 .main-body {
   background-color: #fff;
   border: 1px solid #dddddd;
 }
 .main-body .post-head {
-  height: 66px;
   padding: 10px 15px;
   background-color: #f6f6f6;
   border-bottom: 1px solid #f0f0f0;
 }
 .main-body .post-head .title {
-  height: 30px;
   line-height: 15px;
   font-weight: bold;
 }
@@ -56,17 +59,13 @@ body {
 }
 .main-body .post-head .info {
   height: 26px;
-  padding: 0 15px;
   font-size: 12px;
+  line-height: 26px;
 }
 .main-body .post-head .info .author,
 .main-body .post-head .info .date,
 .main-body .post-head .info .fun {
   display: inline-block;
-}
-.main-body .post-head .info .author {
-  min-width: 6%;
-  max-width: 8%;
 }
 .single-post {
   padding: 10px 15px;
@@ -74,7 +73,6 @@ body {
 }
 .single-post .post-title {
   display: inline-block;
-  width: 68%;
   padding-right: 10px;
   color: #555;
 }
@@ -85,10 +83,6 @@ body {
 .single-post .post-date {
   display: inline-block;
   font-size: 12px;
-}
-.single-post .post-author {
-  min-width: 5%;
-  main-width: 8%;
 }
 .post-body {
   padding: 0 15px 15px;

@@ -41,16 +41,20 @@ body {
     padding-bottom: 100px;
 }
 
+@media screen and (max-width: 1200px) {
+    .main {
+        width: 100%;
+    }
+}
+
 .main-body {
     background-color: #fff;
     border: 1px solid @border-color;
     .post-head {
-        height: 66px;
         padding: 10px 15px;
         background-color: #f6f6f6;
         border-bottom: 1px solid #f0f0f0;
         .title {
-            height: 30px;
             line-height: 15px;
             font-weight: bold;
             a {
@@ -59,16 +63,12 @@ body {
         }
         .info {
             height: 26px;
-            padding: 0 15px;
             font-size: 12px;
+            line-height: 26px;
             .author,
             .date,
             .fun {
                 display: inline-block;
-            }
-            .author {
-                min-width: 6%;
-                max-width: 8%;
             }
         }
 
@@ -80,7 +80,6 @@ body {
     border-bottom: 1px solid #f0f0f0;
     .post-title {
         display: inline-block;
-        width: 68%;
         padding-right: 10px;
         color: #555;
     }
@@ -91,10 +90,6 @@ body {
     .post-date {
         display: inline-block;
         font-size: 12px;
-    }
-    .post-author {
-        min-width: 5%;
-        main-width: 8%;
     }
 }
 
