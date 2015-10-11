@@ -1,3 +1,4 @@
+import routers.baseHandler as base
 import routers.mainHandler as main
 import routers.postHandler as post
 import routers.userHandler as user
@@ -9,4 +10,5 @@ urls = [
     (r'/user/login', user.LoginHandler),
     (r'/user/signup', user.SignupHandler),
     (r'/user/(\d+)', user.ProfileHandler),
+    (r'.*', base.RequestHandler),
 ]

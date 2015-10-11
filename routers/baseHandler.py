@@ -6,6 +6,9 @@ import modules.db
 
 class RequestHandler(tornado.web.RequestHandler):
 
+    def get(self):
+        raise tornado.web.HTTPError(404)
+
     def get_current_user(self):
         return self.get_cookie('current_user');
 
