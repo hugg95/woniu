@@ -7,8 +7,10 @@ import tornado.web
 import modules.db
 import string
 import constants
+import baseHandler
 
-class MainHandler(tornado.web.RequestHandler):
+class MainHandler(baseHandler.RequestHandler):
+    @tornado.web.authenticated
     def get(self, category=None, pageSize=50, pageNum=1):
         query = r'select id, title, member_id, type, category_id, created, updated from post order by if(updated is NULL, created, updated) desc'
         if category is not None:

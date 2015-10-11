@@ -8,6 +8,7 @@ import constants
 import baseHandler
 
 class PostHandler(baseHandler.RequestHandler):
+    @tornado.web.authenticated
     def get(self, id):
         query = 'select id, title, content, type, member_id, category_id, created, updated from post where id = %s'
         post = modules.db.db.get(query, id)

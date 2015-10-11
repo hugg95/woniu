@@ -14,7 +14,8 @@ settings = {
     'compress_response': True,
     'template_path': TEMPLATE_PATH,
     'static_path': STATIC_PATH,
-    'static_url_prefix': '/assets/'
+    'static_url_prefix': '/assets/',
+    'login_url': r'/user/login'
 }
 
 db = {

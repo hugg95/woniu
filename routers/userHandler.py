@@ -7,6 +7,7 @@ import hashlib
 import modules.db
 import datetime
 import string
+import constants
 
 class LoginHandler(baseHandler.RequestHandler):
     def get(self):
@@ -17,7 +18,7 @@ class LoginHandler(baseHandler.RequestHandler):
         password = self.get_body_argument('password')
         nick = nick.strip()
         if not nick or not password:
-            self.write({'success': False})
+            self.write({'success': False, 'error_code': constants.error_code['miss_nick_or_password']})
             self.finish()
             return
         member = modules.db.db.get('select id, nick, password from member where nick = %s', nick)
@@ -30,7 +31,7 @@ class LoginHandler(baseHandler.RequestHandler):
                 self.write({'success': True, 'data': member})
                 self.finish()
                 return
-        self.write({'success': False})
+        self.write({'success': False, 'error_code': constants.error_code['member_not_exist']})
         self.finish()
 
 class SignupHandler(baseHandler.RequestHandler):
