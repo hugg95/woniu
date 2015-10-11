@@ -1,6 +1,9 @@
 {% extends "layout.html" %}
+{% block css-area %}
+    <link href="/assets/css/login.css" rel="stylesheet">
+{% end %}
 {% block main %}
-    <div class="alert alert-danger msg-area error-msg" role="alert">sdsdsdsdsdsdsdsdsdsdsds</div>
+    <div class="alert alert-danger msg-area error-msg" role="alert"></div>
     </div>
     <div class="login-panel">
         <label>
@@ -8,12 +11,16 @@
         </label>
         <form action="/user/login" method="post">
             <div class="input-group">
-                <span class="input-group-addon">账户</span>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-user"></span>
+                </span>
                 <input type="text" class="form-control" name="nick" placeholder="用户名/注册邮箱">
             </div>
             <div class="input-group">
-                <span class="input-group-addon">密码</span>
-                <input type="password" class="form-control" name="password" placeholder="密码">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-lock"></span>
+                </span>
+                <input type="password" class="form-control" name="password" placeholder="密码, 6-18位">
             </div>
             <div class="row">
                 <div class="col-md-12">
