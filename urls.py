@@ -6,9 +6,9 @@ import routers.userHandler as user
 urls = [
     (r'/', main.MainHandler),
     (r'/posts/last', post.ListHandler),
-    (r'/post/(\d+)', post.PostHandler),
-    (r'/user/login', user.LoginHandler),
-    (r'/user/signup', user.SignupHandler),
-    (r'/user/(\d+)', user.ProfileHandler),
+    (r'/posts/(\d+)', post.PostHandler),
+    (r'/users/login', user.LoginHandler),
+    (r'/users/signup', user.SignupHandler),
+    (r'/users/(\d+)', user.ProfileHandler),
     (r'.*', base.RequestHandler),
 ]
