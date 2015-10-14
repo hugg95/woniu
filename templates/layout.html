@@ -38,7 +38,11 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="/users/login">登录</a>
+                            {% if not current_user %}
+                                <a href="/users/login">登录</a>
+                            {% else %}
+                                <a href="user/{{current_user}}">{{current_user}}</a>
+                            {% end %}
                         </li>
                     </ul>
                 </div>
