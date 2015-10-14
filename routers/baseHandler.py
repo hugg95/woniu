@@ -10,7 +10,7 @@ class RequestHandler(tornado.web.RequestHandler):
         raise tornado.web.HTTPError(404)
 
     def get_current_user(self):
-        return self.get_cookie('current_user');
+        return self.get_secure_cookie('current_user');
 
     def write_error(self, status_code, **kwargs):
         if status_code == 404:

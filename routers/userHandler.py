@@ -28,6 +28,7 @@ class LoginHandler(baseHandler.RequestHandler):
             md5.update(password)
             password_md5 = md5.hexdigest()
             if member.password == password_md5:
+                self.set_secure_cookie('current_user', nick, 10)
                 self.write({'success': True, 'data': member})
                 self.finish()
                 return

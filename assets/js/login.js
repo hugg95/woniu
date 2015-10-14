@@ -88,14 +88,14 @@ let hideError = function() {
 let login = function(params) {
     if (!params.pass)
         return;
-    const url = '/user/login';
+    const url = '/users/login';
     const next = (getNext());
     console.log(next);
     $.post(url, params.params, function(data) {
         if (data) {
             if (data.success) {
                 const member = data.data;
-                Utils.cookie.addCookie('current_user', member.nick, 7 * 24);
+                //Utils.cookie.addCookie('current_user', member.nick, 7 * 24);
                 window.location.href = next;
             } else {
                 showError(ErrorCode[data.error_code]);
