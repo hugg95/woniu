@@ -45,7 +45,7 @@ class SignupHandler(baseHandler.RequestHandler):
         nick = nick.strip()
         if nick and password and password_confirm:
             length = len(password)
-            if length >=6 and length <= 18 and password == password_confirm:
+            if length >= 6 and length <= 18 and password == password_confirm:
                 md5 = hashlib.md5()
                 md5.update(password)
                 password_md5 = md5.hexdigest()

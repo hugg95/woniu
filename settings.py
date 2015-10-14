@@ -15,7 +15,8 @@ settings = {
     'template_path': TEMPLATE_PATH,
     'static_path': STATIC_PATH,
     'static_url_prefix': '/assets/',
-    'login_url': r'/user/login'
+    'login_url': r'/users/login',
+    #'cookie_secret': '7BDF5B8CB6C45F17EC11F0DBED858A67'
 }
 
 db = {
