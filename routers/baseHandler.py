@@ -10,7 +10,13 @@ class RequestHandler(tornado.web.RequestHandler):
         raise tornado.web.HTTPError(404)
 
     def get_current_user(self):
-        return self.get_secure_cookie('current_user');
+        current_nick = self.get_secure_cookie('current_user')
+        current_user = None
+        if current_nick:
+            query = 'select id, nick from member where nick = %s'
+            current_user = modules.db.db.get(query, current_nick)
+
+        return current_user
 
     def write_error(self, status_code, **kwargs):
         if status_code == 404:

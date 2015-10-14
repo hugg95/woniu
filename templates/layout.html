@@ -41,7 +41,7 @@
                             {% if not current_user %}
                                 <a href="/users/login">登录</a>
                             {% else %}
-                                <a href="user/{{current_user}}">{{current_user}}</a>
+                                <a href="/users/profile/{{ current_user.id }}">{{ current_user.nick }}</a>
                             {% end %}
                         </li>
                     </ul>
