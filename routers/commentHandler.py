@@ -9,9 +9,9 @@ import modules.db
 class ListHandler(baseHandler.RequestHandler):
 
     def get(self):
-        post_id = 1
+        post_id = self.get_argument('post_id')
         if not post_id:
-            self.write(None)
+            self.write(comments)
             self.finish()
             return
 

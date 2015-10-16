@@ -5,6 +5,8 @@
  * @date 2015/10/11
  */
 
+'use strict'
+
 require('expose?$!expose?jQuery!jquery');
 const ErrorCode = require('json!./error_code.json');
 const Utils = require('./utils.js');
