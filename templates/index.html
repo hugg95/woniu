@@ -4,13 +4,15 @@
 {% block main %}
     <div class="main">
         <div class="col-md-8 main-body">
-            {% for post in posts %}
-                <div class="row single-post">
-                    <div class="col-md-8 col-sm-8 col-xs-12"><a class="post-title" href="/posts/{{ post.id }}">{{ post.title_display }}</a></div>
-                    <div class="col-md-1 col-sm-1 col-xs-3"><a class="text-info post-author" href="/users/{{ post.author.id }}">{{ post.author.nick }}</a></div>
-                    <div class="col-md-3 col-sm-3 col-xs-9"><span class="text-muted post-date">{{ post.updated and post.updated or post.created }}</span></div>
-                </div>
-            {% end %}
+            <div class="post-list">
+                {% for post in posts %}
+                    <div class="row single-post">
+                        <div class="col-md-8 col-sm-8 col-xs-12"><a class="post-title" href="/posts/{{ post.id }}">{{ post.title_display }}</a></div>
+                        <div class="col-md-1 col-sm-1 col-xs-3"><a class="text-info post-author" href="/users/{{ post.author.id }}">{{ post.author.nick }}</a></div>
+                        <div class="col-md-3 col-sm-3 col-xs-9"><span class="text-muted post-date">{{ post.updated and post.updated or post.created }}</span></div>
+                    </div>
+                {% end %}
+            </div>
         </div>
         <div class="col-md-3 pull-right main-side"></div>
     </div>

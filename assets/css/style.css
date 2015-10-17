@@ -4,7 +4,7 @@ html {
 body {
   height: 100%;
   padding: 78px 0 0;
-  font: 14px "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", Tahoma, Helvetica, Arial, sans-serif;
+  font: 12px "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", Tahoma, Helvetica, Arial, sans-serif;
   background-color: #f4f6f8;
 }
 .header {
@@ -41,31 +41,38 @@ body {
     width: 100%;
   }
 }
-.main-body {
+.main-body .post-list {
+  border: 1px solid #dddddd;
   background-color: #fff;
+}
+.main-body .post-area {
   border: 1px solid #dddddd;
 }
-.main-body .post-head {
+.main-body .post-area .post-head {
   padding: 10px 15px;
   background-color: #f6f6f6;
   border-bottom: 1px solid #f0f0f0;
 }
-.main-body .post-head .title {
+.main-body .post-area .post-head .title {
   line-height: 15px;
   font-weight: bold;
 }
-.main-body .post-head .title a {
+.main-body .post-area .post-head .title a {
   color: #555;
 }
-.main-body .post-head .info {
+.main-body .post-area .post-head .info {
   height: 26px;
   font-size: 12px;
   line-height: 26px;
 }
-.main-body .post-head .info .author,
-.main-body .post-head .info .date,
-.main-body .post-head .info .fun {
+.main-body .post-area .post-head .info .author,
+.main-body .post-area .post-head .info .date,
+.main-body .post-area .post-head .info .fun {
   display: inline-block;
+}
+.main-body .post-area .post-body {
+  font-size: 13px;
+  background-color: #fff;
 }
 .single-post {
   padding: 10px 15px;

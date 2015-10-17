@@ -4,7 +4,9 @@
 # @date 2015/10/15
 
 import baseHandler
-import modules.db
+import json
+from modules.db import db
+import modules.utils
 
 class ListHandler(baseHandler.RequestHandler):
 
@@ -16,7 +18,9 @@ class ListHandler(baseHandler.RequestHandler):
             return
 
         query = 'select id, content, member_id, post_id, created, updated from comment where post_id = %s'
-        _comments = modules.db.db.query(query, post_id)
+        _comments = db.query(query, post_id)
+        if _comments:
+            _comments = json.dumps(_comments, cls=modules.utils.JSONEncoder)
         comments = {'comments': _comments}
 
         self.write(comments)

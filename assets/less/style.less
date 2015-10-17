@@ -6,7 +6,7 @@ html {
 body {
     height: 100%;
     padding: 78px 0 0;
-    font: 14px @font-mac, @font-win, @font-linux, @font-common;
+    font: 12px @font-mac, @font-win, @font-linux, @font-common;
     background-color: @gray;
 }
 
@@ -48,30 +48,38 @@ body {
 }
 
 .main-body {
-    background-color: #fff;
-    border: 1px solid @border-color;
-    .post-head {
-        padding: 10px 15px;
-        background-color: #f6f6f6;
-        border-bottom: 1px solid #f0f0f0;
-        .title {
-            line-height: 15px;
-            font-weight: bold;
-            a {
-                color: #555;
+    .post-list {
+        border: 1px solid @border-color;
+        background-color: #fff;
+    }
+    .post-area {
+        border: 1px solid @border-color;
+        .post-head {
+            padding: 10px 15px;
+            background-color: #f6f6f6;
+            border-bottom: 1px solid #f0f0f0;
+            .title {
+                line-height: 15px;
+                font-weight: bold;
+                a {
+                    color: #555;
+                }
+            }
+            .info {
+                height: 26px;
+                font-size: 12px;
+                line-height: 26px;
+                .author,
+                .date,
+                .fun {
+                    display: inline-block;
+                }
             }
         }
-        .info {
-            height: 26px;
-            font-size: 12px;
-            line-height: 26px;
-            .author,
-            .date,
-            .fun {
-                display: inline-block;
-            }
+        .post-body {
+            font-size: 13px;
+            background-color: #fff;
         }
-
     }
 }
 

@@ -4,7 +4,7 @@
 {% block main %}
     <div class="main">
         <div class="col-md-8 main-body">
-            <div class="row">
+            <div class="row post-area">
                 <div class="col-md-12 post-head">
                     <div class="title row">
                         <div class="col-md-12"><a href="javascript:;">{{post.title_display}}</a></div>
@@ -17,16 +17,16 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <div class="col-md-12 post-body">
                     <div class="body">
                         {{ post.content }}
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12 comment-list"></div>
+            <div class="row comment-area">
+                <div class="row">
+                    <div class="col-md-12"></div>
+                </div>
             </div>
         </div>
         <div class="col-md-3 pull-right main-side"></div>
