@@ -20,6 +20,16 @@ class ListHandler(baseHandler.RequestHandler):
         query = 'select id, content, member_id, post_id, created, updated from comment where post_id = %s'
         _comments = db.query(query, post_id)
         if _comments:
+            authors_id = []
+            for _comment in _comments:
+                authors_id.append(str(_comment['post_id']))
+            _authors = db.query('select id, nick from member where id in (' + ','.join(authors_id) + ')')
+
+            for _author in _authors:
+                for _comment in _comments:
+                    if _comment['member_id'] == _author['id']:
+                        _comment.author = _author
+
             _comments = json.dumps(_comments, cls=modules.utils.JSONEncoder)
         comments = {'comments': _comments}
 
