@@ -82,6 +82,10 @@ body {
   padding: 0 10px;
   border-bottom: 1px solid #dddddd;
 }
+.pre-comment {
+  min-height: 30px;
+  padding: 10px;
+}
 .single-post {
   padding: 10px 15px;
   border-bottom: 1px solid #f0f0f0;
